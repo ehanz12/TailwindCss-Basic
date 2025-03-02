@@ -36,14 +36,24 @@
    1. bg-scroll ketika discroll di dalam itu tidak merubah apapun
    2. bg-local ketika discroll pada bg itu maka akan meruba warnanya
    3. bg-fixed ketika discroll pada luar bg maka bg akan berubah warna/tempat biasa dibilang paralax -->
+
   <div class="max-w-xl h-96 bg-blue-300 mx-auto mt-10
   overflow-y-scroll bg-fixed" style="background-image: url(/bg.jpg)">
     <p class="p-5 text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel qui animi incidunt non delectus. Eum rem veritatis ipsum explicabo corrupti autem ab inventore similique sed assumenda! Rem accusamus exercitationem voluptates natus necessitatibus obcaecati et perferendis sequi sit facere? Sunt corporis voluptas laboriosam non nihil dolores, similique necessitatibus dolore. Dolores exercitationem accusantium, modi velit
        molestias earum perferendis expedita laborum labore quia, officia esse recusandae quidem reiciendis, nisi id harum fugiat veritatis voluptatibus. Libero repellendus molestiae odit eligendi iste modi perferendis, accusamus, velit enim voluptatum dolor laudantium nemo sint natus itaque alias autem obcaecati praesentium deserunt. Adipisci at eum modi explicabo neque possimus voluptates eos alias ipsum dolor ea, laudantium distinctio animi facere doloribus atque, commodi officia cupiditate aspernatur ut iure harum quas! Cum in amet explicabo porro facilis iste nihil asperiores dicta, quo mollitia libero molestias deleniti possimus quod eligendi omnis itaque fuga ea ut incidunt quibusdam velit? Temporibus adipisci modi nemo tenetur iusto quidem sequi animi nam architecto? Provident quas nobis perspiciatis doloribus earum dicta tempore repellat eaque voluptatum blanditiis amet minus impedit id ipsam ex, asperiores praesentium eveniet eligendi? Adipisci esse, eum rem inventore nesciunt, impedit nisi excepturi a possimus ullam sequi consectetur magni illo iste. Quaerat, odio sapiente?</p>
   </div>
-  <div class="m-96">
 
+  <!-- background sizing dalam tailwinds ada 3 yaitu
+   1. bg-auto ketika ada gambar akan membuat gambar sesuai defaultnya
+   2. bg-cover yaitu mencari cara memenuhi bgnya secara berkala
+   3. bg-contain yaitu mencari cara memenuhi bgnya secara kontainernya -->
+
+  <div class="mt-32 max-w-xl mx-auto h-96 overflow-hidden bg-blend-multiply bg-blue-300 bg-cover rounded-2xl shadow-xl shadow-teal-500"
+   style="background-image: url(/bg.jpg);">
+      <!-- <div class="w-full h-full bg-teal-300 mix-blend-multiply"></div> -->
   </div>
+
+  <div class="m-96"></div>
 
 </body>
 </html>
