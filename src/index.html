@@ -62,9 +62,22 @@
    border-slate-200 rounded-xl mx-auto p-5 shadow-md
     font-normal group hover:bg-sky-500">
     <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">my car</h5>
-    <p class="text-slate-600 group-hover:text-white selection:bg-lime-500
+    <p class="text-slate-600 font-serif first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 group-hover:text-white selection:bg-lime-500
     selection:text-black">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ducimus nostrum. Exercitationem nobis et sint ullam eaque aspernatur voluptatem voluptatum!
     </p>
+  </div>
+
+  <div class="max-w-lg border border-slate-200 shadow-md p-5 rounded-xl mx-auto">
+    <form action="#">
+      <label for="email">
+        <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-300 after:ml-0.5">Email</span>
+        <input type="email" id="email" placeholder="masukan email ..." class="px-3 py-2 border rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1
+         focus:ring-sky-500 focus:border-sky-500
+         invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+
+         <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email Tidak Valid</p>
+      </label>
+    </form>
   </div>
 
   <div class="m-96"></div>
