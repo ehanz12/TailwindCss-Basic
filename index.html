@@ -4,13 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/src/output.css" rel="stylesheet">
-
-  <style type="text/tailwindcss">
-    #toggle:checked ~ label div#toggle-circle {
-      transform: translateX(0.75rem);
-    }
-  </style>
-
+  <title>Belajar Tailwind css</title>
+  <!-- Add this style section in the head -->
+  
 </head>
 <body class="dark:bg-slate-800 dark:text-slate-200">
 
@@ -40,6 +36,8 @@
       </p>
   </section>
 
+  <!-- Replace the toggle section -->
+
   <!-- background attacments dalam tailwinds ada 3 yaitu
    1. bg-scroll ketika discroll di dalam itu tidak merubah apapun
    2. bg-local ketika discroll pada bg itu maka akan meruba warnanya
@@ -63,16 +61,18 @@
 
   <hr class="my-20"/>
 
-  <div class="flex justify-center">
-    <span class="text-sm text-slate-500 mr-2">Light </span>
-    <input type="checkbox" id="toggle" class="hidden"/>
-    <label for="toggle">
-        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-          <div class="w-4 h-4 bg-white rounded-full" id="toggle-circle" ></div>
-        </div>
-    </label> 
-    <span class="text-sm text-slate-500 ml-2">Dark</span>
+  <div class="flex items-center justify-center gap-2">
+    <span class="text-sm text-slate-500">Light</span>
+    <input type="checkbox" id="toggleSwitch" class="hidden">
+    <label for="toggleSwitch" class="relative cursor-pointer">
+      <div class="w-14 h-7 bg-slate-400 rounded-full">
+        <div class="absolute w-5 h-5 bg-white rounded-full top-1 left-1 transition-transform duration-300 transform toggle-circle"></div>
+      </div>
+    </label>
+    <span class="text-sm text-slate-500">Dark</span>
   </div>
+
+  
 
   <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto hover:bg-sky-600 active:bg-sky-700
    focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900
@@ -104,12 +104,23 @@
 
   <div class="m-96"></div>
 
-<script>
-  const checkbox = document.querySelector('#toggle');
-  const circle = document.querySelector('html');
 
-  checkbox.addEventListener('click', function(){
-    checkbox.checked ? circle.classList.add('dark') : circle.classList.remove('dark');
+
+<script>
+  const toggleSwitch = document.querySelector('#toggleSwitch');
+  const toggleLabel = toggleSwitch.nextElementSibling.querySelector('.toggle-circle');
+  const html = document.querySelector('html');
+  
+  toggleSwitch.addEventListener('change', function() {
+    if (this.checked) {
+      toggleLabel.style.transform = 'translateX(1.75rem)';
+    } else {
+      toggleLabel.style.transform = 'translateX(0)';
+    }
+  });
+
+  toggleSwitch.addEventListener('click', function() {
+    toggleSwitch.checked ? html.classList.add('dark') : html.classList.remove('dark'); 
   });
 </script>
 
